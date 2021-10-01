@@ -1,0 +1,21 @@
+.footerContainer {
+  max-width: 100vw;
+  background-color: black;
+  color: white;
+  margin-bottom: 0px;
+  min-height: 250px;
+}
+.scrollDiv {
+  display: flex;
+  font-size: 29px;
+  justify-content: space-between;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 500px;
+  margin: auto;
+  margin-top: 50px;
+  font-size: 17px;
+}
