@@ -23,6 +23,7 @@ export default function Home(props) {
             imgClassName={styles.firstPostImage}
           />
           <div className={styles.firstPostTitle}>{posts[0].title}</div>
+          <div clasName={styles.postDescription}></div>
         </div>
       </div>
 
@@ -32,7 +33,9 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps(context) {
-  const posts = await client.fetch('*[_type == "post" ]{title, mainImage,}');
+  const posts = await client.fetch(
+    '*[_type == "post" ]{title, mainImage, description}'
+  );
 
   return {
     props: { posts },
