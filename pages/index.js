@@ -16,8 +16,16 @@ export default function Home(props) {
   return (
     <div className={styles.container}>
       <Header />
-      <SanityImage source={firstPost?.mainImage} />
-      <div>{posts[0].title}</div>
+      <div className={styles.content}>
+        <div className={styles.firstPost}>
+          <SanityImage
+            source={firstPost?.mainImage}
+            imgClassName={styles.firstPostImage}
+          />
+          <div className={styles.firstPostTitle}>{posts[0].title}</div>
+        </div>
+      </div>
+
       <Footer />
     </div>
   );

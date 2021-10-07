@@ -8,3 +8,31 @@
 
   height: 100vh;
 }
+.content {
+  background-color: rgb(222, 209, 235);
+}
+.firstPost {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.firstPostImage {
+  margin: auto;
+  max-width: 854px;
+  height: 533px;
+}
+.firstPostTitle {
+  text-align: center;
+  margin: auto;
+  max-width: 858px;
+  height: 162px;
+  left: 293px;
+  top: 787px;
+  font-family: Grotesque, serif;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 54px;
+  line-height: 100%;
+  margin-top: 44px;
+  margin-bottom: 32px;
+}
