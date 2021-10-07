@@ -15,11 +15,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  cursor: auto;
 }
 .firstPostImage {
   margin: auto;
   max-width: 854px;
   height: 533px;
+  cursor: pointer;
 }
 .firstPostTitle {
   text-align: center;
@@ -35,4 +37,14 @@
   line-height: 100%;
   margin-top: 44px;
   margin-bottom: 32px;
+  cursor: pointer;
+}
+.postDescription {
+  font-family: Grotesque, serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  max-width: 858px;
+  margin: auto;
+  cursor: pointer;
 }

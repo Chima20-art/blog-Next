@@ -23,7 +23,7 @@ export default function Home(props) {
             imgClassName={styles.firstPostImage}
           />
           <div className={styles.firstPostTitle}>{posts[0].title}</div>
-          <div clasName={styles.postDescription}></div>
+          <div className={styles.postDescription}>{posts[0].description}</div>
         </div>
       </div>
 
