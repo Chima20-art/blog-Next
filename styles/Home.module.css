@@ -41,7 +41,6 @@
   max-width: 858px;
   margin: auto;
   cursor: pointer;
-
   padding-bottom: 50px;
 }
 .solid {
@@ -59,10 +58,30 @@
   margin-bottom: 20px;
 }
 .articles {
+  width: 60vw;
+
+  margin: auto;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.post {
+  margin: 30px;
+  cursor: pointer;
 }
 .postImage {
-  width: 364px;
-  height: 277px;
+  max-width: 364px;
+  max-height: 277px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.postTitle {
+  max-width: 360px;
+
+  text-align: center;
+  font-size: 1.375rem;
+  font-weight: 500;
+  font-family: Grotesque, serif;
+  color: #1f714a;
+  cursor: pointer;
 }

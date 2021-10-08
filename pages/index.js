@@ -29,17 +29,17 @@ export default function Home(props) {
         <div className={styles.allArticles}>
           <div className={styles.articlesTitle}>All articles</div>
 
-          {posts.map((post) => (
-            <div className={styles.articles}>
-              <div>
+          <div className={styles.articles}>
+            {posts.map((post) => (
+              <div className={styles.post}>
                 <SanityImage
                   source={post.mainImage}
                   imgClassName={styles.postImage}
                 />
-                <div>{post.title}</div>
+                <div className={styles.postTitle}>{post.title}</div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
       <Footer />

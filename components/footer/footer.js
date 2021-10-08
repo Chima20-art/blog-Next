@@ -1,4 +1,8 @@
 import styles from "./footer.module.css";
+import Script from "next/script";
+import Head from "next/head";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const footer = () => {
   return (
@@ -13,6 +17,7 @@ const footer = () => {
         <div>Magic</div>
         <div>Think</div>
       </div>
+
       <div className={styles.description}>
         <p>NORDIC ROSE</p>
         <p>
