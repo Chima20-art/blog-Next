@@ -4,9 +4,10 @@
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.7;
-  font-size: 60px;
+  font-size: 40px;
+  letter-spacing: 0.25cm;
   color: black;
-  margin: 30px;
+  margin: 35px;
   display: flex;
   justify-content: center;
 }

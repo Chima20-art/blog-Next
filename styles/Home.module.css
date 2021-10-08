@@ -1,15 +1,12 @@
 .container {
-  min-height: 100vh;
   max-width: 100vw;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  height: 100vh;
 }
 .content {
-  background-color: rgb(222, 209, 235);
+  margin-bottom: 20px;
 }
 .firstPost {
   display: flex;
@@ -20,16 +17,13 @@
 .firstPostImage {
   margin: auto;
   max-width: 854px;
-  height: 533px;
+  max-height: 533px;
   cursor: pointer;
 }
 .firstPostTitle {
   text-align: center;
   margin: auto;
   max-width: 858px;
-  height: 162px;
-  left: 293px;
-  top: 787px;
   font-family: Grotesque, serif;
   font-weight: 700;
   line-height: 1.2;
@@ -47,4 +41,28 @@
   max-width: 858px;
   margin: auto;
   cursor: pointer;
+
+  padding-bottom: 50px;
+}
+.solid {
+  width: 792px;
+  border-top: 1px solid #bbb;
+  margin: auto;
+}
+.articlesTitle {
+  font-size: 2.75rem;
+  font-family: Grotesque, serif;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.articles {
+  display: flex;
+  flex-direction: row;
+}
+.postImage {
+  width: 364px;
+  height: 277px;
 }

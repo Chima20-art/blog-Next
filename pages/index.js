@@ -24,9 +24,24 @@ export default function Home(props) {
           />
           <div className={styles.firstPostTitle}>{posts[0].title}</div>
           <div className={styles.postDescription}>{posts[0].description}</div>
+          <div className={styles.solid} />
+        </div>
+        <div className={styles.allArticles}>
+          <div className={styles.articlesTitle}>All articles</div>
+
+          {posts.map((post) => (
+            <div className={styles.articles}>
+              <div>
+                <SanityImage
+                  source={post.mainImage}
+                  imgClassName={styles.postImage}
+                />
+                <div>{post.title}</div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-
       <Footer />
     </div>
   );
