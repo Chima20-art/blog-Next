@@ -1,4 +1,5 @@
 import client from "../client";
+import Link from "next/link";
 
 import Img from "next/image";
 import SanityImage from "../sanityImage";
@@ -31,13 +32,17 @@ export default function Home(props) {
 
           <div className={styles.articles}>
             {posts.map((post) => (
-              <div className={styles.post}>
-                <SanityImage
-                  source={post.mainImage}
-                  imgClassName={styles.postImage}
-                />
-                <div className={styles.postTitle}>{post.title}</div>
-              </div>
+              <Link key={post.slug.current} href={"/post/" + post.slug.current}>
+                <a>
+                  <div className={styles.post}>
+                    <SanityImage
+                      source={post.mainImage}
+                      imgClassName={styles.postImage}
+                    />
+                    <div className={styles.postTitle}>{post.title}</div>
+                  </div>
+                </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -49,7 +54,7 @@ export default function Home(props) {
 
 export async function getServerSideProps(context) {
   const posts = await client.fetch(
-    '*[_type == "post" ]{title, mainImage, description}'
+    '*[_type == "post" ]{title, slug, mainImage, description}'
   );
 
   return {
