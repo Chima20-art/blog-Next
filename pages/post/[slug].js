@@ -2,6 +2,8 @@ import client from "../../client";
 import { useRouter } from "next/router";
 import BlockContent from "@sanity/block-content-to-react";
 
+import YouTube from "react-youtube";
+import styles from "../../styles/Home.module.css";
 const Post = (props) => {
   const slug = props.slug;
   const post = props.post;
@@ -18,13 +20,18 @@ const Post = (props) => {
     <article>
       <h1>{post?.title}</h1>
       <h2>{post?.minutesOfRead}</h2>
-      {post?.body.map((block) => {
-        if (block._type == "block") {
-          return <BlockContent blocks={block} />;
-        } else {
-          if (block._type == "youtubevideo") {
-            return <h1> video</h1>;
-          }
+      {post?.body.map((item) => {
+        if (item._type == "block") {
+          return <BlockContent blocks={item} />;
+        }
+        if (item._type == "youtubevideo") {
+          return <YouTube videoId={item.url} />;
+        }
+        if (item._type == "thin-divider") {
+          return <div className={styles.solid} />;
+        }
+        if (item._type == "thick-divider") {
+          return <div className={styles.bold} />;
         }
       })}
     </article>

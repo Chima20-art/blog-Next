@@ -32,7 +32,10 @@ export default function Home(props) {
 
           <div className={styles.articles}>
             {posts.map((post) => (
-              <Link key={post.slug.current} href={"/post/" + post.slug.current}>
+              <Link
+                key={post?.slug?.current}
+                href={"/post/" + post?.slug?.current}
+              >
                 <a>
                   <div className={styles.post}>
                     <SanityImage
@@ -56,7 +59,7 @@ export async function getServerSideProps(context) {
   const posts = await client.fetch(
     '*[_type == "post" ]{title, slug, mainImage, description}'
   );
-
+  console.log();
   return {
     props: { posts },
   };
