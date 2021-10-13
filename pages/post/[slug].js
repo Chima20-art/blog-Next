@@ -1,6 +1,7 @@
 import client from "../../client";
 import { useRouter } from "next/router";
 import BlockContent from "@sanity/block-content-to-react";
+import SanityImage from "../../sanityImage";
 
 import YouTube from "react-youtube";
 import styles from "../../styles/Home.module.css";
@@ -29,6 +30,9 @@ const Post = (props) => {
         }
         if (item._type == "thin-divider") {
           return <div className={styles.solid} />;
+        }
+        if (item._type == "image") {
+          return <SanityImage source={item} imgClassName={styles.postImage} />;
         }
         if (item._type == "thick-divider") {
           return <div className={styles.bold} />;
