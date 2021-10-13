@@ -37,6 +37,17 @@ const Post = (props) => {
         if (item._type == "thick-divider") {
           return <div className={styles.bold} />;
         }
+        if (item._type == "customized-divider") {
+          return (
+            <div className={styles.roseDivider}>
+              <div className={styles.before}></div>
+              <div className={styles.rose}></div>
+              <div className={styles.after}></div>
+            </div>
+          );
+        }
+        {
+        }
       })}
     </article>
   );
