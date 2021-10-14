@@ -155,3 +155,6 @@
 .tags {
   display: flex;
 }
+.dashedDivider {
+  border-bottom: 1px dashed #bbb;
+}

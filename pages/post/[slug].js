@@ -66,11 +66,13 @@ const Post = (props) => {
         <div>Tags: </div>
         <div>
           {post.tags.map((item) => {
-            console.log(item);
             return <div>{item.title}</div>;
           })}
         </div>
       </div>
+      <SanityImage source={post?.author.image} />
+      <div className={styles.author}>{post?.author.name}</div>
+      <div className={styles.author}>{post?.author.bio}</div>
     </article>
   );
 };
@@ -81,7 +83,7 @@ export async function getServerSideProps(context) {
   const query =
     "*[_type == 'post' && slug.current=='" +
     slug +
-    "'][0]{ _createdAt,title, author->, body, mainImage, minutesOfRead, tags[]->, }";
+    "'][0]{ _createdAt,title, author->,  author-> , body, mainImage, minutesOfRead, tags[]->, }";
   const post = await client.fetch(query);
 
   return {
