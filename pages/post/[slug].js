@@ -5,6 +5,7 @@ import SanityImage from "../../sanityImage";
 import Link from "next/link";
 
 import YouTube from "react-youtube";
+import Header from "../../components/header";
 import styles from "../../styles/Home.module.css";
 const Post = (props) => {
   const slug = props.slug;
@@ -19,61 +20,74 @@ const Post = (props) => {
   }
 
   return (
-    <article>
-      <h1>{post?.title}</h1>
-      <h2>{post?.minutesOfRead}</h2>
-      {post?.body.map((item) => {
-        if (item._type == "block") {
-          return <BlockContent className={styles.block} blocks={item} />;
-        }
-        if (item._type == "youtubevideo") {
-          return <YouTube videoId={item.url} />;
-        }
-        if (item._type == "thin-divider") {
-          return <div className={styles.solid} />;
-        }
-        if (item._type == "image") {
-          return <SanityImage source={item} imgClassName={styles.postImage} />;
-        }
-        if (item._type == "thick-divider") {
-          return <div className={styles.bold} />;
-        }
-        if (item._type == "customized-divider") {
-          return (
-            <div className={styles.roseDivider}>
-              <div className={styles.before}></div>
-              <div className={styles.rose}></div>
-              <div className={styles.after}></div>
-            </div>
-          );
-        }
-        if (item._type == "linkParagraph") {
-          return (
-            <Link href={item.URL}>
-              <div className={styles.linkParagraph}>
-                <div className={styles.bookMark}></div>
-                <div className={styles.paragraph}>
-                  <div className={styles.linkParagraphTitle}>{item.title}</div>
-                  <div className={styles.description}>{item.description}</div>
-                  <div className={styles.footer}>{item.footer}</div>
-                </div>
+    <div className={styles.page}>
+      <Header />
+      <article>
+        <h1>{post?.title}</h1>
+        <h2>{post?.minutesOfRead}</h2>
+        {post?.body.map((item) => {
+          if (item._type == "block") {
+            return <BlockContent className={styles.block} blocks={item} />;
+          }
+          if (item._type == "youtubevideo") {
+            return <YouTube videoId={item.url} />;
+          }
+          if (item._type == "thin-divider") {
+            return <div className={styles.solid} />;
+          }
+          if (item._type == "image") {
+            return (
+              <SanityImage source={item} imgClassName={styles.postImage} />
+            );
+          }
+          if (item._type == "thick-divider") {
+            return <div className={styles.bold} />;
+          }
+          if (item._type == "customized-divider") {
+            return (
+              <div className={styles.roseDivider}>
+                <div className={styles.before}></div>
+                <div className={styles.rose}></div>
+                <div className={styles.after}></div>
               </div>
-            </Link>
-          );
-        }
-      })}
-      <div className={styles.tags}>
-        <div>Tags: </div>
-        <div>
-          {post.tags.map((item) => {
-            return <div>{item.title}</div>;
-          })}
+            );
+          }
+          if (item._type == "linkParagraph") {
+            return (
+              <Link href={item.URL}>
+                <div className={styles.linkParagraph}>
+                  <div className={styles.bookMark}></div>
+                  <div className={styles.paragraph}>
+                    <div className={styles.linkParagraphTitle}>
+                      {item.title}
+                    </div>
+                    <div className={styles.description}>{item.description}</div>
+                    <div className={styles.footer}>{item.footer}</div>
+                  </div>
+                </div>
+              </Link>
+            );
+          }
+        })}
+        <div className={styles.tags}>
+          <div>Tags: </div>
+          <div>
+            {post.tags.map((item) => {
+              return <div>{item.title}</div>;
+            })}
+          </div>
         </div>
-      </div>
-      <SanityImage source={post?.author.image} />
-      <div className={styles.author}>{post?.author.name}</div>
-      <div className={styles.author}>{post?.author.bio}</div>
-    </article>
+        <div className={styles.author}>
+          <SanityImage
+            source={post?.author.image}
+            imgClassName={styles.authorImage}
+          />
+          <div className={styles.authorBio}>
+            <b>{post?.author.name}</b> {post?.author.bio}
+          </div>
+        </div>
+      </article>
+    </div>
   );
 };
 
