@@ -2,6 +2,7 @@ import client from "../../client";
 import { useRouter } from "next/router";
 import BlockContent from "@sanity/block-content-to-react";
 import SanityImage from "../../sanityImage";
+import Link from "next/link";
 
 import YouTube from "react-youtube";
 import styles from "../../styles/Home.module.css";
@@ -48,10 +49,16 @@ const Post = (props) => {
         }
         if (item._type == "linkParagraph") {
           return (
-            <div className={styles.block}>
-              <div className={styles.linkParagraphTitle}>{item.title}</div>
-              <div>{item.description}</div>
-            </div>
+            <Link href={item.URL}>
+              <div className={styles.linkParagraph}>
+                <div className={styles.bookMark}></div>
+                <div className={styles.paragraph}>
+                  <div className={styles.linkParagraphTitle}>{item.title}</div>
+                  <div className={styles.description}>{item.description}</div>
+                  <div className={styles.footer}>{item.footer}</div>
+                </div>
+              </div>
+            </Link>
           );
         }
         {

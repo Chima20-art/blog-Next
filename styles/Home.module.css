@@ -114,10 +114,41 @@
   background: url(https://www.nordicrose.net/assets/hr-rose.svg) 50% 50%
     no-repeat;
 }
-.block {
-  background-color: #d8dddb;
+
+.linkParagraph {
+  max-width: 726px;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  cursor: pointer;
+  margin: auto;
+}
+.bookMark {
+  margin: 23px;
+  height: 0.75rem;
+  width: 0.75rem;
+  background: url(https://www.nordicrose.net/assets/bookmark-arrow-green.svg)
+    50% 50% no-repeat;
 }
 .linkParagraphTitle {
   color: #1f714a;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 500;
+  font-family: Grotesque, serif;
   text-decoration: underline;
+}
+.paragraph {
+  max-width: 642px;
+  font-family: Grotesque, serif;
+  margin: 15px;
+}
+.description {
+  margin: 15px 0px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.64);
+}
+.footer {
+  color: rgba(0, 0, 0, 0.44);
 }
