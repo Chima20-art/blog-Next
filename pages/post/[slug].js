@@ -23,7 +23,7 @@ const Post = (props) => {
       <h2>{post?.minutesOfRead}</h2>
       {post?.body.map((item) => {
         if (item._type == "block") {
-          return <BlockContent blocks={item} />;
+          return <BlockContent className={styles.block} blocks={item} />;
         }
         if (item._type == "youtubevideo") {
           return <YouTube videoId={item.url} />;
@@ -43,6 +43,14 @@ const Post = (props) => {
               <div className={styles.before}></div>
               <div className={styles.rose}></div>
               <div className={styles.after}></div>
+            </div>
+          );
+        }
+        if (item._type == "linkParagraph") {
+          return (
+            <div className={styles.block}>
+              <div className={styles.linkParagraphTitle}>{item.title}</div>
+              <div>{item.description}</div>
             </div>
           );
         }
