@@ -21,54 +21,59 @@ const Post = (props) => {
 
   return (
     <div className={styles.page}>
-      <Header />
+      <Header headerClassName={styles.postHeader} />
       <article className={styles.article}>
-        <h1>{post?.title}</h1>
+        <h1 className={styles.articleTitle}>{post?.title}</h1>
         <h2>{post?.minutesOfRead}</h2>
-        {post?.body.map((item) => {
-          if (item._type == "block") {
-            return <BlockContent className={styles.block} blocks={item} />;
-          }
-          if (item._type == "youtubevideo") {
-            return <YouTube videoId={item.url} />;
-          }
-          if (item._type == "thin-divider") {
-            return <div className={styles.solid} />;
-          }
-          if (item._type == "image") {
-            return (
-              <SanityImage source={item} imgClassName={styles.postImage} />
-            );
-          }
-          if (item._type == "thick-divider") {
-            return <div className={styles.bold} />;
-          }
-          if (item._type == "customized-divider") {
-            return (
-              <div className={styles.roseDivider}>
-                <div className={styles.before}></div>
-                <div className={styles.rose}></div>
-                <div className={styles.after}></div>
-              </div>
-            );
-          }
-          if (item._type == "linkParagraph") {
-            return (
-              <Link href={item.URL}>
-                <div className={styles.linkParagraph}>
-                  <div className={styles.bookMark}></div>
-                  <div className={styles.paragraph}>
-                    <div className={styles.linkParagraphTitle}>
-                      {item.title}
-                    </div>
-                    <div className={styles.description}>{item.description}</div>
-                    <div className={styles.footer}>{item.footer}</div>
-                  </div>
+        <div className={styles.block}>
+          {post?.body.map((item) => {
+            if (item._type == "block") {
+              return <BlockContent blocks={item} />;
+            }
+            if (item._type == "youtubevideo") {
+              return <YouTube videoId={item.url} />;
+            }
+            if (item._type == "thin-divider") {
+              return <div className={styles.solid} />;
+            }
+            if (item._type == "image") {
+              return (
+                <SanityImage source={item} imgClassName={styles.postImage} />
+              );
+            }
+            if (item._type == "thick-divider") {
+              return <div className={styles.bold} />;
+            }
+            if (item._type == "customized-divider") {
+              return (
+                <div className={styles.roseDivider}>
+                  <div className={styles.before}></div>
+                  <div className={styles.rose}></div>
+                  <div className={styles.after}></div>
                 </div>
-              </Link>
-            );
-          }
-        })}
+              );
+            }
+            if (item._type == "linkParagraph") {
+              return (
+                <Link href={item.URL}>
+                  <div className={styles.linkParagraph}>
+                    <div className={styles.bookMark}></div>
+                    <div className={styles.paragraph}>
+                      <div className={styles.linkParagraphTitle}>
+                        {item.title}
+                      </div>
+                      <div className={styles.description}>
+                        {item.description}
+                      </div>
+                      <div className={styles.footer}>{item.footer}</div>
+                    </div>
+                  </div>
+                </Link>
+              );
+            }
+          })}
+        </div>
+
         <div className={styles.tags}>
           <div>Tags: </div>
           <div>

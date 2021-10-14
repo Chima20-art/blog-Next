@@ -16,7 +16,7 @@ export default function Home(props) {
   console.log(restOfPosts);
   return (
     <div className={styles.container}>
-      <Header />
+      <Header headerClassName={styles.headerTitle} />
       <div className={styles.content}>
         <div className={styles.firstPost}>
           <SanityImage

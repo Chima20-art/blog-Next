@@ -1,7 +1,7 @@
-import styles from "../styles/header.module.css";
+import styles from "../styles/Home.module.css";
 
-const header = () => {
-  return <div className={styles.title}>NORDIC ROSE</div>;
+const header = ({ headerClassName }) => {
+  return <div className={headerClassName}>NORDIC ROSE</div>;
 };
 
 export default header;
