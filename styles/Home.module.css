@@ -8,6 +8,12 @@
 .content {
   margin-bottom: 20px;
 }
+.article {
+  background-color: chartreuse;
+  width: 60%;
+  margin: auto;
+  border-top: 1px solid black;
+}
 .firstPost {
   display: flex;
   flex-direction: column;
@@ -92,8 +98,9 @@
 }
 .roseDivider {
   display: flex;
+  margin: auto;
   align-items: center;
-  width: calc(50% - 1rem);
+  width: calc(90% - 1rem);
 }
 .before {
   display: inline-block;

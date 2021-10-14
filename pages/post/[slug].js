@@ -22,7 +22,7 @@ const Post = (props) => {
   return (
     <div className={styles.page}>
       <Header />
-      <article>
+      <article className={styles.article}>
         <h1>{post?.title}</h1>
         <h2>{post?.minutesOfRead}</h2>
         {post?.body.map((item) => {
