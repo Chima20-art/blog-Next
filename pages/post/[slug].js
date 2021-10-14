@@ -61,9 +61,16 @@ const Post = (props) => {
             </Link>
           );
         }
-        {
-        }
       })}
+      <div className={styles.tags}>
+        <div>Tags: </div>
+        <div>
+          {post.tags.map((item) => {
+            console.log(item);
+            return <div>{item.title}</div>;
+          })}
+        </div>
+      </div>
     </article>
   );
 };
