@@ -31,6 +31,10 @@ const footer = () => {
         <div className={styles.link}>LinkedIn</div>
         <div className={styles.link}>RSS</div>
       </div>
+      <div className={styles.footerBottomText}>
+        <p>© 2012-2021 Nordic Rose Co.</p>
+        <p>All rights reserved.</p>
+      </div>
     </div>
   );
 };

@@ -43,3 +43,9 @@
   font-weight: 500;
   font-size: 1rem;
 }
+.footerBottomText {
+  text-align: center;
+  width: fit-content;
+  justify-content: center;
+  margin: auto;
+}
