@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import BlockContent from "@sanity/block-content-to-react";
 import SanityImage from "../../sanityImage";
 import Link from "next/link";
+import Home from "..";
 
 import YouTube from "react-youtube";
 import Header from "../../components/header";
@@ -21,7 +22,10 @@ const Post = (props) => {
 
   return (
     <div className={styles.page}>
-      <Header headerClassName={styles.postHeader} />
+      <Link href="/post/Home">
+        <Header headerClassName={styles.postHeader} />
+      </Link>
+
       <article className={styles.article}>
         <h1 className={styles.articleTitle}>{post?.title}</h1>
         <h2>{post?.minutesOfRead}</h2>
