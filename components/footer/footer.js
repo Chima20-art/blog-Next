@@ -19,12 +19,17 @@ const footer = () => {
       </div>
 
       <div className={styles.description}>
-        <p>NORDIC ROSE</p>
-        <p>
+        <p className={styles.title}>NORDIC ROSE</p>
+        <p className={styles.textDescription}>
           By nurturing a close relationship with design and neighbouring
           subjects, Nordic Rose strives to distill the essence of their combined
           beauty into clarity of the tomorrow.
         </p>
+      </div>
+      <div className={styles.mediaLinks}>
+        <div className={styles.link}>Twiter</div>
+        <div className={styles.link}>LinkedIn</div>
+        <div className={styles.link}>RSS</div>
       </div>
     </div>
   );

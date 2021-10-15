@@ -17,6 +17,7 @@ export default function Home(props) {
   return (
     <div className={styles.container}>
       <Header headerClassName={styles.headerTitle} />
+
       <div className={styles.content}>
         <div className={styles.firstPost}>
           <SanityImage

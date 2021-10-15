@@ -19,3 +19,27 @@
   margin-top: 50px;
   font-size: 17px;
 }
+.title {
+  text-align: center;
+  font-family: Grotesque, serif;
+  font-size: 2rem;
+}
+.textDescription {
+  text-align: center;
+  font-size: 1rem;
+  font-family: Grotesque, serif;
+  line-height: 26px;
+}
+.mediaLinks {
+  display: flex;
+  flex-direction: row;
+  font-family: Grotesque, serif;
+  margin: auto;
+  justify-content: center;
+}
+.link {
+  text-decoration: underline;
+  margin: 30px;
+  font-weight: 500;
+  font-size: 1rem;
+}
