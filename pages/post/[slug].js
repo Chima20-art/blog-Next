@@ -7,6 +7,7 @@ import Home from "..";
 
 import YouTube from "react-youtube";
 import Header from "../../components/header";
+import Footer from "../../components/footer/footer";
 import styles from "../../styles/Home.module.css";
 const Post = (props) => {
   const slug = props.slug;
@@ -96,6 +97,7 @@ const Post = (props) => {
           </div>
         </div>
       </article>
+      <Footer />
     </div>
   );
 };
