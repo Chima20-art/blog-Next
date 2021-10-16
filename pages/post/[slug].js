@@ -8,8 +8,29 @@ import Home from "..";
 import YouTube from "react-youtube";
 import Header from "../../components/header";
 import Footer from "../../components/footer/footer";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import styles from "../../styles/Home.module.css";
 const Post = (props) => {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
   const slug = props.slug;
   const post = props.post;
   console.log(post);
@@ -23,10 +44,30 @@ const Post = (props) => {
 
   return (
     <div className={styles.page}>
-      <Link href="/post/Home">
-        <Header headerClassName={styles.postHeader} />
-      </Link>
-
+      <Header headerClassName={styles.postHeader} />
+      <Carousel
+        swipeable={false}
+        draggable={true}
+        showDots={false}
+        responsive={responsive}
+        ssr={true} // means to render carousel on server-side.
+        infi
+        nite={true}
+        autoPlay={true}
+        autoPlaySpeed={1000}
+        keyBoardControl={true}
+        customTransition="all .5"
+        transitionDuration={500}
+        containerClass="carousel-container"
+        dotListClass="custom-dot-list-style"
+        itemClass="carousel-item-padding-40-px"
+      >
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+      </Carousel>
+      ;
       <article className={styles.article}>
         <h1 className={styles.articleTitle}>{post?.title}</h1>
         <h2>{post?.minutesOfRead}</h2>
