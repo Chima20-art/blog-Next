@@ -42,6 +42,7 @@
 .article {
   width: 60%;
   margin: auto;
+  margin-bottom: 80px;
 }
 .articleTitle {
   padding-top: 70px;
@@ -222,6 +223,7 @@
   margin: auto;
   max-width: 760px;
   border-top: 1px dashed #bbb;
+  margin-bottom: 30px;
 }
 .authorImage {
   background-color: royalblue;
@@ -238,4 +240,6 @@
   font-size: 1rem;
   margin-top: 10px;
   padding: 20px;
+}
+.page {
 }

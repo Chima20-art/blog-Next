@@ -1,0 +1,10 @@
+.big {
+  background-color: burlywood;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

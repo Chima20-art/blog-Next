@@ -51,8 +51,7 @@ const Post = (props) => {
         showDots={false}
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
-        infi
-        nite={true}
+        infinite={true}
         autoPlay={true}
         autoPlaySpeed={1000}
         keyBoardControl={true}
@@ -67,7 +66,7 @@ const Post = (props) => {
         <div>Item 3</div>
         <div>Item 4</div>
       </Carousel>
-      ;
+
       <article className={styles.article}>
         <h1 className={styles.articleTitle}>{post?.title}</h1>
         <h2>{post?.minutesOfRead}</h2>
