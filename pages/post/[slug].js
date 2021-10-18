@@ -137,6 +137,9 @@ const Post = (props) => {
           </div>
         </div>
       </article>
+      <div className={styles.eyesBorder}></div>
+      <div className={styles.next}></div>
+
       <Footer />
     </div>
   );
