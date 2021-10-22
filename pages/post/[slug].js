@@ -33,6 +33,10 @@ const Post = (props) => {
   };
   const slug = props.slug;
   const post = props.post;
+  const posts = props.posts;
+
+  console.log("posts : ", posts);
+
   console.log(post);
   if (!slug || !post || !post.title) {
     return (
@@ -138,7 +142,23 @@ const Post = (props) => {
         </div>
       </article>
       <div className={styles.eyesBorder}></div>
-      <div className={styles.next}></div>
+      <div div className={styles.next}>
+        <div className={styles.nextTitle}>What to read next</div>
+      </div>
+
+      {posts.map((post) => (
+        <Link key={post?.slug?.current} href={"/post/" + post?.slug?.current}>
+          <a>
+            <div className={styles.post}>
+              <SanityImage
+                source={post.mainImage}
+                imgClassName={styles.postImage}
+              />
+              <div className={styles.postTitle}>{post.title}</div>
+            </div>
+          </a>
+        </Link>
+      ))}
 
       <Footer />
     </div>
@@ -153,11 +173,17 @@ export async function getServerSideProps(context) {
     slug +
     "'][0]{ _createdAt,title, author->,  author-> , body, mainImage, minutesOfRead, tags[]->, }";
   const post = await client.fetch(query);
+  const posts = await client.fetch(
+    '*[_type == "post" && slug.current!="' +
+      slug +
+      '" ]{title, slug, mainImage, description}'
+  );
 
   return {
     props: {
       slug,
       post,
+      posts,
     },
   };
 }

@@ -11,7 +11,7 @@ import Footer from "../components/footer/footer";
 export default function Home(props) {
   var { posts } = props;
   var firstPost = posts[0];
-  var restOfPosts = posts.slice(0, 1);
+  var restOfPosts = posts.slice(1, posts.length);
 
   console.log(restOfPosts);
   return (
@@ -32,7 +32,7 @@ export default function Home(props) {
           <div className={styles.articlesTitle}>All articles</div>
 
           <div className={styles.articles}>
-            {posts.map((post) => (
+            {restOfPosts.map((post) => (
               <Link
                 key={post?.slug?.current}
                 href={"/post/" + post?.slug?.current}
