@@ -146,6 +146,12 @@
 }
 .headerDescription {
   text-align: center;
+  max-width: 639px;
+  margin: auto;
+  font-weight: 400;
+  font-family: Grotesque, serif;
+  font-size: 1.375rem;
+  line-height: 1.7;
 }
 .postTitle {
   max-width: 360px;
