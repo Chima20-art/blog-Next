@@ -19,15 +19,21 @@ export default function Home(props) {
       <Header headerClassName={styles.headerTitle} />
 
       <div className={styles.content}>
-        <div className={styles.firstPost}>
-          <SanityImage
-            source={firstPost?.mainImage}
-            imgClassName={styles.firstPostImage}
-          />
-          <div className={styles.firstPostTitle}>{posts[0].title}</div>
-          <div className={styles.postDescription}>{posts[0].description}</div>
-          <div className={styles.solid} />
-        </div>
+        <Link
+          key={firstPost?.slug?.current}
+          href={"/post/" + firstPost?.slug?.current}
+        >
+          <div className={styles.firstPost}>
+            <SanityImage
+              source={firstPost?.mainImage}
+              imgClassName={styles.firstPostImage}
+            />
+            <div className={styles.firstPostTitle}>{posts[0].title}</div>
+            <div className={styles.postDescription}>{posts[0].description}</div>
+            <div className={styles.solid} />
+          </div>
+        </Link>
+
         <div className={styles.allArticles}>
           <div className={styles.articlesTitle}>All articles</div>
 
