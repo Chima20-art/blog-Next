@@ -40,7 +40,6 @@
 }
 
 .article {
-  width: 60%;
   margin: auto;
   margin-bottom: 80px;
 }
@@ -119,7 +118,7 @@
   margin: auto;
 }
 .articles {
-  width: 60vw;
+  background-color: #1f714a;
 
   margin: auto;
   display: flex;
@@ -132,10 +131,19 @@
   cursor: pointer;
 }
 .postImage {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   margin-bottom: 10px;
   cursor: pointer;
+}
+.headerImage {
+  width: 100vw;
+  height: auto;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.headerDescription {
+  text-align: center;
 }
 .postTitle {
   max-width: 360px;
@@ -181,6 +189,7 @@
   background-color: #fff;
   cursor: pointer;
   margin: auto;
+  margin-bottom: 50px;
 }
 .bookMark {
   margin: 23px;

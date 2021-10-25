@@ -74,6 +74,12 @@ const Post = (props) => {
       <article className={styles.article}>
         <h1 className={styles.articleTitle}>{post?.title}</h1>
         <h2>{post?.minutesOfRead}</h2>
+        <p className={styles.headerDescription}>{post?.description}</p>
+        <SanityImage
+          source={post?.headerImage}
+          imgClassName={styles.headerImage}
+        />
+
         <div className={styles.block}>
           {post?.body.map((item) => {
             if (item._type == "block") {
@@ -171,7 +177,7 @@ export async function getServerSideProps(context) {
   const query =
     "*[_type == 'post' && slug.current=='" +
     slug +
-    "'][0]{ _createdAt,title, author->,  author-> , body, mainImage, minutesOfRead, tags[]->, }";
+    "'][0]{ _createdAt,title,headerImage, description, author->,  author-> , body, mainImage, minutesOfRead, tags[]->, }";
   const post = await client.fetch(query);
   const posts = await client.fetch(
     '*[_type == "post" && slug.current!="' +
