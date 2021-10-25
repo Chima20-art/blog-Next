@@ -120,8 +120,6 @@
   margin: auto;
 }
 .articles {
-  background-color: #1f714a;
-
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -263,4 +261,15 @@
   background-color: black;
   margin-bottom: 70px;
   height: 2px;
+}
+.next {
+  margin: auto;
+}
+.nextTitle {
+  font-family: Mackay-Bold, serif;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
 }
