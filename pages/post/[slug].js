@@ -108,11 +108,27 @@ const Post = (props) => {
           })}
         </div>
 
+        <div className={styles.media}>
+          <div className={styles.facebookDiv}>
+            <img className={styles.fbLogo} />
+            share on facebook
+          </div>
+          <div className={styles.twiterDiv}>
+            <img className={styles.tweetLogo} />
+            share on twiter
+          </div>
+        </div>
+
         <div className={styles.tags}>
-          <div>Tags: </div>
-          <div>
-            {post.tags.map((item) => {
-              return <div>{item.title}</div>;
+          <div>Tags: &nbsp;</div>
+          <div className={styles.tagsArangement}>
+            {post.tags.map((item, index) => {
+              return (
+                <div>
+                  {item.title + (post.tags.length - 1 != index ? "," : ".")}
+                  &nbsp;
+                </div>
+              );
             })}
           </div>
         </div>

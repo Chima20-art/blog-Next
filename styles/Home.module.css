@@ -233,6 +233,9 @@
   padding-bottom: 30px;
   margin: auto;
 }
+.tagsArangement {
+  display: flex;
+}
 .author {
   display: flex;
   margin: auto;
@@ -272,4 +275,81 @@
   font-size: 2rem;
   text-align: center;
   margin-bottom: 40px;
+}
+.media {
+  display: flex;
+  justify-content: center;
+}
+
+.facebookDiv {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 2.625rem;
+  min-width: 4.375rem;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: Grotesque, serif;
+  text-align: center;
+  width: 320px;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}
+.facebookDiv:hover {
+  color: #1877f2;
+}
+
+.facebookDiv:hover .fbLogo {
+  background: url(/facebookBlue.png) no-repeat 0 0;
+  min-width: 20px;
+  min-height: 20px;
+  margin-right: 10px;
+}
+.fbLogo {
+  background: url(/facebook.png) no-repeat 0 0;
+  min-width: 20px;
+  min-height: 20px;
+  margin-right: 10px;
+}
+
+.twiterDiv {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 2.625rem;
+  min-width: 4.375rem;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: Grotesque, serif;
+  text-align: center;
+  width: 320px;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}
+.twiterDiv:hover {
+  color: #55acee;
+}
+
+.twiterDiv:hover .tweetLogo {
+  background: url(/Vector8.png) no-repeat 0 0;
+  min-width: 20px;
+  min-height: 20px;
+  margin-right: 10px;
+}
+.tweetLogo {
+  background: url(/Vector-7.png) no-repeat 0 0;
+  min-width: 20px;
+  min-height: 20px;
+  margin-right: 10px;
+}
+.socialMediaLogo {
+  fill: #55acee;
 }
