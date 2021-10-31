@@ -8,14 +8,25 @@ const footer = () => {
   return (
     <div className={styles.footerContainer}>
       <p className={styles.p}>
+        <div>Digital product design</div>
+        <div>UX design</div>
+        <div>Remote work</div>
+        <div>Creativity</div>
+        <div>Strategy</div>
+        <div>Design</div>
         <div>Magic</div>
-        <div>Think</div>
-        <div>Magic</div>
-        <div>Think</div>
-        <div>Magic</div>
-        <div>Think</div>
-        <div>Magic</div>
-        <div>Think</div>
+        <div>Failure</div>
+        <div>Suspense</div>
+        <div>Why</div>
+        <div>Why not</div>
+        <div>Growth</div>
+        <div>Sabotage</div>
+        <div>Clarity</div>
+        <div>Confusion</div>
+        <div>Processes</div>
+        <div>People</div>
+        <div>Create</div>
+        <div>Destroy</div>
       </p>
 
       <div className={styles.description}>
