@@ -53,3 +53,23 @@
   margin: auto;
   font-size: 0.75rem;
 }
+.scrollDiv {
+  -webkit-animation: 3s linear 1s infinite running move_eye;
+  animation: 3s linear 1s infinite running move_eye;
+}
+@-webkit-keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+@keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}

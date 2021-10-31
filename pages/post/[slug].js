@@ -35,9 +35,6 @@ const Post = (props) => {
   const post = props.post;
   const posts = props.posts;
 
-  console.log("posts : ", posts);
-
-  console.log(post);
   if (!slug || !post || !post.title) {
     return (
       <div>
