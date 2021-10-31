@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 const footer = () => {
   return (
     <div className={styles.footerContainer}>
-      <div className={styles.scrollDiv}>
+      <p className={styles.p}>
         <div>Magic</div>
         <div>Think</div>
         <div>Magic</div>
@@ -16,7 +16,7 @@ const footer = () => {
         <div>Think</div>
         <div>Magic</div>
         <div>Think</div>
-      </div>
+      </p>
 
       <div className={styles.description}>
         <p className={styles.title}>NORDIC ROSE</p>
