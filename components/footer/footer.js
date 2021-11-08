@@ -8,7 +8,7 @@ const footer = () => {
   return (
     <div className={styles.footerContainer}>
       <p className={styles.p}>
-        <div>Digital product design</div>
+        <div className={styles.p1}>Digital product design</div>
         <div>UX design</div>
         <div>Remote work</div>
         <div>Creativity</div>

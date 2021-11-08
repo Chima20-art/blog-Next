@@ -47,7 +47,6 @@
 .footerBottomText {
   text-align: center;
   font-family: Grotesque, serif;
-
   width: fit-content;
   justify-content: center;
   margin: auto;
@@ -55,11 +54,15 @@
 }
 
 .p {
+  max-height: 20px;
+  width: fit-content;
+
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+
   animation-duration: 15s;
   animation-name: slidein;
+  animation-fill-mode: backwards;
   animation-iteration-count: infinite;
 }
 @keyframes slidein {
@@ -72,4 +75,8 @@
     margin-left: 0%;
     width: 100%;
   }
+}
+
+.p1 {
+  margin-right: 20px;
 }
