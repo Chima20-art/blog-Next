@@ -1,32 +1,49 @@
 import styles from "./footer.module.css";
 import Script from "next/script";
 import Head from "next/head";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const footer = () => {
+  var tags = [
+    "Digital product design",
+    "UX design",
+    "Remote work",
+    "Creativity",
+    "Strategy",
+    "Design",
+    "Magic",
+    "Failure",
+    "Suspense",
+    "Why",
+    "Why not",
+    "Growth",
+    "Sabotage",
+    "Clarity",
+    "Confusion",
+    "Processes",
+    "People",
+    "Create",
+    "Destroy",
+  ];
+
   return (
     <div className={styles.footerContainer}>
       <p className={styles.p}>
-        <div className={styles.p1}>Digital product design</div>
-        <div>UX design</div>
-        <div>Remote work</div>
-        <div>Creativity</div>
-        <div>Strategy</div>
-        <div>Design</div>
-        <div>Magic</div>
-        <div>Failure</div>
-        <div>Suspense</div>
-        <div>Why</div>
-        <div>Why not</div>
-        <div>Growth</div>
-        <div>Sabotage</div>
-        <div>Clarity</div>
-        <div>Confusion</div>
-        <div>Processes</div>
-        <div>People</div>
-        <div>Create</div>
-        <div>Destroy</div>
+        {tags.map((tag, i) => {
+          tag = tag.toUpperCase();
+          if (i % 2 == 0) {
+            return (
+              <p key={tag} className={styles.b}>
+                {tag}
+              </p>
+            );
+          } else {
+            return (
+              <p key={tag} className={styles.p1}>
+                {tag}
+              </p>
+            );
+          }
+        })}
       </p>
 
       <div className={styles.description}>
