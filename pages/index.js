@@ -19,11 +19,8 @@ export default function Home(props) {
       <Header headerClassName={styles.headerTitle} />
 
       <div className={styles.content}>
-        <Link
-          key={firstPost?.slug?.current}
-          href={"/post/" + firstPost?.slug?.current}
-        >
-          <div className={styles.firstPost}>
+        <Link href={"/post/" + firstPost?.slug?.current}>
+          <a key={firstPost?.slug?.current} className={styles.firstPost}>
             <SanityImage
               source={firstPost?.mainImage}
               imgClassName={styles.firstPostImage}
@@ -31,7 +28,7 @@ export default function Home(props) {
             <div className={styles.firstPostTitle}>{posts[0].title}</div>
             <div className={styles.postDescription}>{posts[0].description}</div>
             <div className={styles.solid} />
-          </div>
+          </a>
         </Link>
 
         <div className={styles.allArticles}>

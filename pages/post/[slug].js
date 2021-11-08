@@ -68,7 +68,7 @@ const Post = (props) => {
             if (item._type == "linkParagraph") {
               return (
                 <Link href={item.URL}>
-                  <div className={styles.linkParagraph}>
+                  <a className={styles.linkParagraph}>
                     <div className={styles.bookMark}></div>
                     <div className={styles.paragraph}>
                       <div className={styles.linkParagraphTitle}>
@@ -79,7 +79,7 @@ const Post = (props) => {
                       </div>
                       <div className={styles.footer}>{item.footer}</div>
                     </div>
-                  </div>
+                  </a>
                 </Link>
               );
             }
@@ -102,7 +102,7 @@ const Post = (props) => {
           <div className={styles.tagsArangement}>
             {post.tags.map((item, index) => {
               return (
-                <div>
+                <div key={item.title}>
                   {item.title + (post.tags.length - 1 != index ? "," : ".")}
                   &nbsp;
                 </div>
