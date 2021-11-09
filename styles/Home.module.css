@@ -157,7 +157,7 @@
 @media (max-width: 800px) {
   .firstPostImage {
     margin: auto;
-    width: 100%;
+    width: 100vw;
     height: auto;
     cursor: pointer;
   }
