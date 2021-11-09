@@ -123,6 +123,7 @@
   margin: auto;
 }
 .articles {
+  max-width: 858px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -139,8 +140,7 @@
   width: 325px;
 }
 .postImage {
-  width: 325px;
-
+  width: 739px;
   height: auto;
   margin-bottom: 10px;
   cursor: pointer;

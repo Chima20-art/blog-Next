@@ -120,24 +120,31 @@ const Post = (props) => {
           </div>
         </div>
       </article>
-      <div className={styles.eyesBorder}></div>
+      <div className={styles.eyesBorder} />
+
       <div className={styles.next}>
         <div className={styles.nextTitle}>What to read next</div>
 
-        {posts.map((post) => (
-          <Link key={post?.slug?.current} href={"/post/" + post?.slug?.current}>
-            <a>
-              <div className={styles.post}>
-                <SanityImage
-                  source={post.mainImage}
-                  imgClassName={styles.postImage}
-                />
-                <div className={styles.postTitle}>{post.title}</div>
-              </div>
-            </a>
-          </Link>
-        ))}
+        <div className={styles.articles}>
+          {posts.map((post) => (
+            <Link
+              key={post?.slug?.current}
+              href={"/post/" + post?.slug?.current}
+            >
+              <a>
+                <div className={styles.post}>
+                  <SanityImage
+                    source={post.mainImage}
+                    imgClassName={styles.postImage}
+                  />
+                  <div className={styles.postTitle}>{post.title}</div>
+                </div>
+              </a>
+            </Link>
+          ))}
+        </div>
       </div>
+
       <Footer />
     </div>
   );
