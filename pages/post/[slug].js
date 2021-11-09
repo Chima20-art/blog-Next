@@ -24,11 +24,26 @@ const Post = (props) => {
     );
   }
 
+  var colorsArr = [
+    "#FFEBF2",
+    "#FFFFCD",
+    "#F1F2FF",
+    "#F3FFE6",
+    "#FFF6E6",
+    "#F3FFE6",
+    "#E6FFEF",
+    "#F8F2FE",
+    "#E6FFFC",
+  ];
+  var randColor = colorsArr[Math.floor(Math.random() * colorsArr.length)];
+  console.log(randColor);
   return (
     <div className={styles.page}>
       <Header headerClassName={styles.postHeader} />
 
-      <article className={styles.article}>
+      <article
+        style={{ background: "linear-gradient(" + randColor + " , #ffffff)" }}
+      >
         <h1 className={styles.articleTitle}>{post?.title}</h1>
         <h2>{post?.minutesOfRead}</h2>
         <p className={styles.headerDescription}>{post?.description}</p>
@@ -36,7 +51,6 @@ const Post = (props) => {
           source={post?.headerImage}
           imgClassName={styles.headerImage}
         />
-
         <div className={styles.block}>
           {post?.body.map((item) => {
             if (item._type == "block") {
