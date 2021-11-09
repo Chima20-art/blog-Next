@@ -10,7 +10,7 @@ import Header from "../../components/header";
 import Footer from "../../components/footer/footer";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/slug.module.css";
 const Post = (props) => {
   const slug = props.slug;
   const post = props.post;
