@@ -30,6 +30,7 @@ export default function Home(props) {
             <div className={styles.solid} />
           </a>
         </Link>
+        <div className={styles.border} />
 
         <div className={styles.allArticles}>
           <div className={styles.articlesTitle}>All articles</div>
