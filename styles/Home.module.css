@@ -81,7 +81,36 @@
 
 .allArticles {
   max-width: 858px;
+
   margin: auto;
+}
+.articles {
+  max-width: 858px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.post {
+  margin: 30px;
+  cursor: pointer;
+  width: 325px;
+}
+.postImage {
+  width: 310px;
+  height: auto;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.postTitle {
+  max-width: 360px;
+  text-align: left;
+  font-size: 1.375rem;
+  font-weight: 500;
+  font-family: Grotesque, serif;
+  color: #1f714a;
+  cursor: pointer;
+  margin-left: 3px;
 }
 
 .roseDivider {
