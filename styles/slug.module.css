@@ -283,3 +283,14 @@
   cursor: pointer;
   margin-left: 3px;
 }
+
+@media (max-width: 780px) {
+  .articleTitle {
+    background-color: khaki;
+    text-align: center;
+    margin: auto;
+    margin: auto 20px;
+
+    font-size: 10px;
+  }
+}

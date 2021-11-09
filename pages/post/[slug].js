@@ -34,6 +34,7 @@ const Post = (props) => {
     "#E6FFEF",
     "#F8F2FE",
     "#E6FFFC",
+    "#FFFFFF",
   ];
   var randColor = colorsArr[Math.floor(Math.random() * colorsArr.length)];
   console.log(randColor);
