@@ -50,7 +50,10 @@ const Post = (props) => {
             }
             if (item._type == "image") {
               return (
-                <SanityImage source={item} imgClassName={styles.postImage} />
+                <SanityImage
+                  source={item}
+                  imgClassName={styles.postPrivateImage}
+                />
               );
             }
             if (item._type == "thick-divider") {

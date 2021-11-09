@@ -139,8 +139,14 @@
   cursor: pointer;
   width: 325px;
 }
-.postImage {
+.postPrivateImage {
   width: 739px;
+  height: auto;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.postImage {
+  width: 310px;
   height: auto;
   margin-bottom: 10px;
   cursor: pointer;
