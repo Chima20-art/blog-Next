@@ -286,11 +286,26 @@
 
 @media (max-width: 780px) {
   .articleTitle {
-    background-color: khaki;
+    padding-top: 70px;
+    padding-bottom: 10px;
+    max-width: 400px;
     text-align: center;
-    margin: auto;
-    margin: auto 20px;
 
-    font-size: 10px;
+    font-weight: 700;
+    font-family: Grotesque, serif;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+  }
+  .headerDescription {
+    text-align: center;
+    max-width: 400px;
+    padding: 20px 0px;
+    margin: auto;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-family: Grotesque, serif;
+    font-size: 1.375rem;
+    line-height: 1.7;
   }
 }
