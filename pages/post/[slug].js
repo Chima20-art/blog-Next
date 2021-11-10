@@ -58,7 +58,7 @@ const Post = (props) => {
               return <BlockContent blocks={item} />;
             }
             if (item._type == "youtubevideo") {
-              return <YouTube videoId={item.url} />;
+              return <YouTube videoId={item.url} className={styles.vd} />;
             }
             if (item._type == "thin-divider") {
               return <div className={styles.solid} />;

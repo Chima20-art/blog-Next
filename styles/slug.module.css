@@ -355,4 +355,13 @@
     width: 325px;
     margin-bottom: 30px;
   }
+  .vd {
+    width: 90vw;
+  }
+  .postPrivateImage {
+    width: 90vw;
+    height: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
 }
