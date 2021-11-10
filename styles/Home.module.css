@@ -73,6 +73,7 @@
   max-width: 750px;
   margin-bottom: 70px;
   height: 1px;
+  margin: auto;
 }
 .articlesTitle {
   font-size: 2.75rem;
@@ -85,12 +86,14 @@
 }
 .allArticles {
   max-width: 858px;
+  margin: auto;
 }
 .articles {
   max-width: 858px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .post {
   margin: 30px;
