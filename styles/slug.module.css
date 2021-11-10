@@ -364,4 +364,43 @@
     margin-bottom: 10px;
     cursor: pointer;
   }
+  .logoDescription {
+    display: none !important;
+  }
+  .facebookDiv {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2.625rem;
+    min-width: 4.375rem;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: Grotesque, serif;
+    text-align: center;
+    width: 30vw;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+  }
+  .twiterDiv {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2.625rem;
+    min-width: 4.375rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: Grotesque, serif;
+    text-align: center;
+    width: 30vw;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+  }
 }

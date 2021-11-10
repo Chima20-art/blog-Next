@@ -107,11 +107,11 @@ const Post = (props) => {
         <div className={styles.media}>
           <div className={styles.facebookDiv}>
             <img className={styles.fbLogo} />
-            share on facebook
+            <p className={styles.logoDescription}>share on facebook</p>
           </div>
           <div className={styles.twiterDiv}>
             <img className={styles.tweetLogo} />
-            share on twiter
+            <p className={styles.logoDescription}>share on twiter</p>
           </div>
         </div>
 
