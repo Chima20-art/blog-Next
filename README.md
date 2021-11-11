@@ -1,8 +1,10 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
-![image](https://github.com/Chima20-art/blog-Next/blob/main/Screenshot%202021-11-11%20at%2023.42.25.png)
 
+<img src="https://github.com/Chima20-art/blog-Next/blob/main/Screenshot%202021-11-11%20at%2023.55.43.png" width="1000" height="1000"/>
+
+<img src="https://github.com/Chima20-art/blog-Next/blob/main/Screenshot%202021-11-11%20at%2023.58.22.png" width="240" height="500" />
 First, run the development server:
 
 ```bash
